@@ -87,7 +87,7 @@ production:
   <<: *default
   adapter: redis
   url: <%= ENV["REDIS_URL"] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] || "postgresql://todo_api_production_eosa_user:qrDnQQt3DHx8PMeiDkt5AUWlDtYt1GEp@dpg-d274rc63jp1c73e8i320-a/todo_api_production_eosa"%>
   database: todo_api_production
-  username: <%= ENV["BOOK_MY_SHOW_1_DATABASE_USERNAME"] %>
-  password: <%= ENV["BOOK_MY_SHOW_1_DATABASE_PASSWORD"] %>
+  username: <%= ENV["DATABASE_USERNAME"] || "postgres" %>
+  password: <%= ENV["DATABASE_PASSWORD"] || "postgres" %>
