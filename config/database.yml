@@ -85,6 +85,9 @@ test:
 #
 production:
   <<: *default
+  adapter: redis
+  url: <%= ENV["REDIS_URL"] %>
+  url: <%= ENV['DATABASE_URL'] %>
   database: todo_api_production
   username: <%= ENV["BOOK_MY_SHOW_1_DATABASE_USERNAME"] %>
   password: <%= ENV["BOOK_MY_SHOW_1_DATABASE_PASSWORD"] %>
