@@ -2,7 +2,7 @@ databases:
   - name: postgres
     ipAllowList: []
     databaseName: todo_api_production
-    user: todo_api_production
+    user: portgres
 
 services:
   - type: web
